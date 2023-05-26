@@ -1,0 +1,54 @@
+<div class="container mt-4 titles">
+    <div class="row">
+        <div class="col">
+            <h1>
+                <i class="fa-solid fa-user-plus"></i> &nbsp;
+                Add User Page
+            </h1>
+            <p style="text-align: justify;">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt nulla officia nobis illo quas, in
+                accusantium sequi accusamus magni, quia eaque, eius dicta consequuntur. Recusandae iste porro similique
+                magni nemo? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi commodi illo vel culpa
+                asperiores rerum nesciunt rem, vero itaque quaerat eaque id repudiandae facere molestias assumenda iure
+                quos sed quae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt iusto nam cumque
+                accusantium quae facere! Provident error harum optio quod debitis neque ipsam autem numquam sit iste
+                asperiores, eligendi sequi!
+            </p>
+        </div>
+    </div>
+
+
+    <!-- add contact form -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <form class="border border-dark p-3 rounded">
+                    <div class="mb-2">
+                        <input name="id" [(ngModel)]="user.id" type="text" class="form-control" placeholder=" Id">
+                    </div>
+                    <div class="mb-2">
+                        <input name="name" [(ngModel)]="user.name"  type="text" class="form-control" placeholder="Name">
+                    </div>
+                    
+                    <div class="mb-2">
+                        <input name="Dob" [(ngModel)]="user.dob" type="date" class="form-control" placeholder="Dob">
+                    </div>
+                    <div class="mb-2">
+                        <input name="email" [(ngModel)]="user.email" type="email" class="form-control" placeholder="Email">
+                    </div>
+                    <div class="mb-2">
+                        <input name="salary" [(ngModel)]="user.salary" type="number" class="form-control" placeholder="Salary">
+                    </div>
+                    <div class="mb-2">
+                        <input type="radio" [(ngModel)]="user.gender" name="gender" value="male">  Male <input type="radio" [(ngModel)]="user.gender" name="gender" value="female"> Female 
+                    </div>
+                    <div class="mb-2">
+                        <input (click)="adduser()" type="button" value="Create" class="btn btn-success">
+                        <a routerLink="/" class="btn btn-warning ms-3">Close</a>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+</div>

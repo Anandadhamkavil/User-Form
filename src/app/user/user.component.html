@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>User Management Application
+            <a routerLink="/user/adduser" class="btn btn-success" type="button">
+                <!-- <i class="fa-solid fa-user-plus"></i> &nbsp; -->
+                Add User
+            </a>
+        </h1>
+            <p style="text-align: justify; padding: 10px;">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt nulla officia nobis illo quas, in accusantium sequi accusamus magni, quia eaque, eius dicta consequuntur. Recusandae iste porro similique magni nemo? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi commodi illo vel culpa asperiores rerum nesciunt rem, vero itaque quaerat eaque id repudiandae facere molestias assumenda iure quos sed quae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae modi dignissimos quis dolorum obcaecati, vitae in maxime iusto? Iure laborum quae nam iste corporis sequi omnis magnam temporibus, in id!
+            </p>
+            <div class="row">
+                <div class="col-6">
+<input (keyup)="search($event)" type="text" class="form-control" placeholder="Search contact here"> 
+            </div>
+            </div>
+            <div class="container mt-2">
+                <div class="row">
+                        <table class="table border border-dark" >
+                            <thead>
+                              <tr>
+                                <th scope="col">Id</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Date Of Birth</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Salary</th>
+                                <th scope="col">Gender</th>
+                                <th scope="col">Action</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr *ngFor="let users of alluser | filter : searchKey :'name'">
+                                <th scope="row">{{users.id}}</th>
+                                <td>{{users.name}}</td>
+                                <td>{{users.dob}}</td>
+                                <td>{{users.email}}</td>
+                                <td>{{users.salary}}</td>
+                                <td>{{users.gender}}</td>
+                                <td colspan="2">
+                                  <button (click)="deleteUser(users.id)" type="button" class="btn btn-danger mt-1">
+                                    <i class="fa-solid fa-trash"></i></button> 
+                                    <span class="ms-2 btn btn-warning"><i routerLink="/user/edituser" class="fa-solid fa-pen-to-square"></i></span>         
+                                </td>                 
+                               </tr>
+                            </tbody>
+                          </table>
+                </div>
+            </div>

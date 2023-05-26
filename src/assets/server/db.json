@@ -1,0 +1,28 @@
+{
+  "user": [
+    {
+      "id": "1",
+      "name": "Leonardo DiCaprio",
+      "dob": "27-04-2001",
+      "email": "dicaprio@april.biz",
+      "salary": "10000",
+      "gender": "Male"
+    },
+    {
+      "id": "2",
+      "name": "Ervin Howell",
+      "dob": "16-05-2000",
+      "email": "Shanna@melissa.tv",
+      "salary": "10000",
+      "gender": "Male"
+    },
+    {
+      "id": "3",
+      "name": "Preethi",
+      "dob": "2001-04-01",
+      "email": "test@gamil.com",
+      "salary": "10000",
+      "gender": "Female"
+    }
+  ]
+}
