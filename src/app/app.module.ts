@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EdituserComponent } from './edituser/edituser.component';
 import { FilterPipe } from './pipe/filter.pipe';
+import { SortPipe } from './sortPipe/sort.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FilterPipe } from './pipe/filter.pipe';
     UserComponent,
     NavbarComponent,
     EdituserComponent,
-    FilterPipe
+    FilterPipe,
+    SortPipe
   ],
   imports: [
     BrowserModule,

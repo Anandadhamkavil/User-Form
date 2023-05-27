@@ -2,11 +2,11 @@
   "user": [
     {
       "id": "1",
-      "name": "Leonardo DiCaprio",
-      "dob": "27-04-2001",
+      "name": "Akash ",
+      "dob": "2023-05-03",
       "email": "dicaprio@april.biz",
       "salary": "10000",
-      "gender": "Male"
+      "gender": "male"
     },
     {
       "id": "2",
@@ -23,6 +23,14 @@
       "email": "test@gamil.com",
       "salary": "10000",
       "gender": "Female"
+    },
+    {
+      "id": "4",
+      "name": "Lince",
+      "dob": "2023-05-13",
+      "email": "test@gamil.com",
+      "salary": 30000,
+      "gender": "female"
     }
   ]
 }

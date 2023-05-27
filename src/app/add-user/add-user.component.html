@@ -22,26 +22,48 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <form class="border border-dark p-3 rounded">
+                <form class="border border-dark p-3 rounded"  [formGroup]="userForm">
                     <div class="mb-2">
-                        <input name="id" [(ngModel)]="user.id" type="text" class="form-control" placeholder=" Id">
+                        <input name="id" formControlName="id" [(ngModel)]="user.id" type="text" class="form-control" placeholder=" Id">
                     </div>
+                    <!-- invalid id -->
+                    <div *ngIf="this.userForm.get('id')?.errors&&this.userForm.get('id')?.touched"
+                    class="text-danger mb-2">Invalid Id</div>
                     <div class="mb-2">
-                        <input name="name" [(ngModel)]="user.name"  type="text" class="form-control" placeholder="Name">
+                        <input name="name" formControlName="name" [(ngModel)]="user.name"  type="text" class="form-control" placeholder="Name">
                     </div>
+                    <!-- invalid name -->
+                    <div *ngIf="this.userForm.get('name')?.errors&&this.userForm.get('name')?.touched"
+                    class="text-danger mb-2">Invalid Name</div>
                     
                     <div class="mb-2">
-                        <input name="Dob" [(ngModel)]="user.dob" type="date" class="form-control" placeholder="Dob">
+                        <input name="Dob" formControlName="Dob" [(ngModel)]="user.dob" type="date" class="form-control" placeholder="Dob">
                     </div>
+                     <!-- invalid Dob -->
+                    <div *ngIf="this.userForm.get('Dob')?.errors&&this.userForm.get('Dob')?.touched"
+                    class="text-danger mb-2">Invalid Date Of Birth</div>
+
                     <div class="mb-2">
-                        <input name="email" [(ngModel)]="user.email" type="email" class="form-control" placeholder="Email">
+                        <input name="email" formControlName="email" [(ngModel)]="user.email" type="email" class="form-control" placeholder="Email">
                     </div>
+                    <!-- invalid email -->
+                    <div *ngIf="this.userForm.get('email')?.errors&&this.userForm.get('email')?.touched"
+                    class="text-danger mb-2">Invalid Email</div>
+
                     <div class="mb-2">
-                        <input name="salary" [(ngModel)]="user.salary" type="number" class="form-control" placeholder="Salary">
+                        <input name="salary" formControlName="salary" [(ngModel)]="user.salary" type="number" class="form-control" placeholder="Salary">
                     </div>
+                    <!-- invalid email -->
+                    <div *ngIf="this.userForm.get('salary')?.errors&&this.userForm.get('salary')?.touched"
+                    class="text-danger mb-2">Invalid Salary</div>
+
                     <div class="mb-2">
-                        <input type="radio" [(ngModel)]="user.gender" name="gender" value="male">  Male <input type="radio" [(ngModel)]="user.gender" name="gender" value="female"> Female 
+                        <input type="radio" formControlName="gender" [(ngModel)]="user.gender" name="gender" value="male">  Male <input type="radio" formControlName="gender" [(ngModel)]="user.gender" name="gender" value="female"> Female 
                     </div>
+                    <!-- invalid email -->
+                    <div *ngIf="this.userForm.get('gender')?.errors&&this.userForm.get('gender')?.touched"
+                    class="text-danger mb-2">Select Gender</div>
+
                     <div class="mb-2">
                         <input (click)="adduser()" type="button" value="Create" class="btn btn-success">
                         <a routerLink="/" class="btn btn-warning ms-3">Close</a>

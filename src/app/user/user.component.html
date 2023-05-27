@@ -30,7 +30,7 @@
                               </tr>
                             </thead>
                             <tbody>
-                              <tr *ngFor="let users of alluser | filter : searchKey :'name'">
+                              <tr *ngFor="let users of alluser | filter : searchKey :'name' sort ">
                                 <th scope="row">{{users.id}}</th>
                                 <td>{{users.name}}</td>
                                 <td>{{users.dob}}</td>
@@ -40,7 +40,7 @@
                                 <td colspan="2">
                                   <button (click)="deleteUser(users.id)" type="button" class="btn btn-danger mt-1">
                                     <i class="fa-solid fa-trash"></i></button> 
-                                    <span class="ms-2 btn btn-warning"><i routerLink="/user/edituser" class="fa-solid fa-pen-to-square"></i></span>         
+                                    <span class="ms-2 btn btn-warning"><i routerLink="/user/edit/{{users.id}}" class="fa-solid fa-pen-to-square"></i></span>         
                                 </td>                 
                                </tr>
                             </tbody>
